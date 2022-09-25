@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <title>Robo-World</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/cnc_programmer.css" rel="stylesheet" type="text/css">
+  <link href="css/roboworldMobileRobots.css" rel="stylesheet" type="text/css">
+
+  <style>
+    body,
+    td,
+    th {
+      color: #00020A;
+      background-color: #F0F5F5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1">
+            <span class="sr-only">Toggle navigation</span>
+            Menu <span class="glyphicon glyphicon-chevron-down "></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> <b>ROBO-WORLD</b></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="topFixedNavbar1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown, active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                aria-expanded="false">Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="active"><a href="mobile_robots.html">Mobile robots</a></li>
+                <li><a href="softwareDevelopment.html">Software Development</a></li>
+                <li><a href="automations.html">Automations</a></li>
+              </ul>
+            <li><a href="about_me.html">About me</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                aria-expanded="false">Language<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="index.html">EN</a></li>
+              </ul>
+            </li>
+          </ul> <!-- close navbar main -->
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+
+  <!-- photo background on the top  -->
+  <div class="row" id="iconsMobileRobots">
+    <section class="row">
+      <img id="back" src="my_images/darker_blue_background.png" alt="background under nav bar" class="img-responsive ">
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="row" id="feature">
+      <div class="col-sm-10 col-sm-offset-2   col-md-10 col-sm-offset-1">
+        <p> Mobile robots</p>
+        <br>
+        <p>I chose mobile robots because they have many applications, programming is challenging,
+          especially when you get to the part of recognising objects with a camera, not to mention mapping and using
+          GPS.
+          A mobile robot can be extended with an additional arm to pick up objects, so we have a whole spectrum of
+          different problems to solve.</p>
+        <p> I started to take an interest in building robots in 2008.
+          Those were very different times, hardly anyone had heard of Arduino and Raspberry Pi had not yet been born.
+          Building a mobile robot required more work than today.
+          I started by buying an Atmega development board and a stack of books on programming microcontrollers using
+          BASCOM.
+          The six-wheeled vehicle programmed, had the ability to be driven by two DC motors and four servos for turning.
+          On the front of the vehicle is an obstacle recognition sensor I built.
+        </p>
+        <p>
+          In 2009, I noticed that I could use a better solution and the Arduino was it.
+          I bought an Arduino Duemilanove which had an ATmega328p on board, a chip with more outputs and inputs than
+          the
+          ATmega8.
+          I experimented a bit with diodes and started building a linefollower,
+          I decided that I would postpone the six-wheeler project for another time as it required more work and money
+          (let's not forget the crisis). I built this linefollower from what I could find in my home toolbox.
+          Converted servo motors (discarded electronics) used as drive, and turning is done by adjusting the speed of
+          the driven wheels.
+          On the front is a sensor module for colour recognition, on the back is an arduino and a motor controller I
+          built (bridge l298d)
+          and a colour sensor controller.
+        </p>
+        <p>Until 2011, in my spare time, I experimented with sonar and obstacle sensors and a sumo robot, but due to
+          lack of time,
+          I stopped doing mobile robotics and returned to the topic in 2020. I called it the reactivation roboworld,
+          I started building a mobile robot, this time 4 wheeled with Raspberry Pi 3.</p>
+        <p>
+          After research, I realized that it was best if the program was to be written in Python.
+          As I had no prior knowledge of the language, I did "Complete Python Developer: Zero to Mastery" and then
+          "Master Computer Vision System OpenCV3" these courses were very interesting.
+          These 2 months after working hours allowed me to start playing with Raspberry and building a robot that
+          recognizes objects.
+          As it turned out, the Raspberry Pi 3 has a weak processor and not enough RAM, which makes object recognition
+          very slow.
+          I started delving into the field of object recognition and found an interesting topic like Tensorflow. I
+          used
+          Tensorflow Lite and the built-in model on a Raspberry Pi, but the image was still analyzed at 2 frames per
+          second.
+          That's why I bought a Google Coral accelerator which accelerated to 8 frames per second.
+        </p>
+        <p>
+          I wrote a program that allowed me to control the robot remotely using a laptop using the arrows on the
+          keyboard and in a separate window
+          I have a view from the camera. I thought a robot control application would be useful, so I created a Python
+          web application and Flask.
+          I managed to create a graphically simple interface and deploy it so that I could use the application via the
+          Internet.
+          Thanks to this, allows me to control the robot using a telephone or computer outside my local network.
+        </p>
+        <p>
+          I used remote.it to connect remotely. In my account, when connecting to the Pi, a 'proxy' link is provided
+          through which I connect via a web browser.
+          However, this solution has disadvantages such as, huge lags. This option is not suitable for my use.
+          I have therefore come to another solution, which is to control the 'Rasperry Pi' via VNC.
+          This is a program I use to manage and run the robot remotely, also on a laptop. To make it possible for the
+          Pi to connect outside the local network,
+          I create a network access point ("sharing") on my phone.
+          I can also connect my laptop to the Pi as I have added an extra wifi card which allows me to do this.
+        </p>
+        <p>Next steps in the project.</p>
+        <p>1.Installation of "Tensorflow" on the "Raspberry Pi 4".</p>
+        <p>2. Programm for a "line follower" using the camera</p>
+        <p>3. Mounting of Sonar - distance recognition experiments already done.</p>
+        <p>4. Build a mobile application or improve Web App</p>
+      </div>
+      <div class="col-sm-10 col-sm-offset-1"></div>
+    </section>
+    <section class="col-lg-12"></section>
+  </div>
+
+  <!-- section with the photos and videos-->
+  <section id="highlights" class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="Ikonki" style="text-align:center;">
+
+        <!-- VIDEOS -->
+        <div class="clearfix visible-sm-block"></div>
+        <article class="col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videoControlerMobileRobot">
+            <iframe width="364" height="647"
+              src="projects/mobile_robots/fourWheelsRaspberryPi/tensorflow_camera_on_table.webm"
+              title="TensorflowObjectRecognition"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Tensorflow Object Recognition</a>
+          <p></p>
+        </article>
+
+        <article class=" col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videosMobileRobot">
+            <iframe width="364" height="647" src="projects/mobile_robots/fourWheelsRaspberryPi/autoDriveWebApp.webm"
+              title="roboworld.MOV"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Web App (Python + Flask)</a>
+          <p></p>
+          <p>&nbsp;</p>
+        </article>
+
+        <!-- VIDEOS 2nd -->
+        <div class="clearfix visible-sm-block"></div>
+        <article class="col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videoControlerMobileRobot2">
+            <iframe width="364" height="647" src="https://www.youtube.com/embed/ROTlCMCb9s8" title="line follower new"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Line Follower (Arduino)</a>
+          <p></p>
+        </article>
+
+        <article class=" col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videosMobileRobot2">
+            <iframe width="364" height="647" src="https://www.youtube.com/embed/V-0G_KSmiI0"
+              title="View Driving robot Autodrive"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Web App (Python + Flask)</a>
+          <p></p>
+          <p>&nbsp;</p>
+        </article>
+
+        <!-- VIDEOS 3rd -->
+        <div class="clearfix visible-sm-block"></div>
+        <article class="col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videoControlerMobileRobot3">
+
+            <iframe width="364" height="647"
+              src="projects/mobile_robots/fourWheelsRaspberryPi/tensorflow_object_recognition.webm"
+              title="Tensorflow Driving Car"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Tensorflow Driving Car</a>
+          <p></p>
+        </article>
+
+        <article class=" col-sm-6 col-lg-6 col-md-6">
+          <div class="embed-responsive embed-responsive-4by3" id="videosMobileRobot3">
+            <iframe width="364" height="647" src="https://www.youtube.com/embed/_WoDGJBcIuI"
+              title="Driving Robot Using Keyboard"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Controling Car by Keyboard</a>
+          <p></p>
+          <p>&nbsp;</p>
+        </article>
+
+        <!-- Second Phoostos -->
+        <article class="col-sm-6 col-lg-6 col-md-6">
+          <img tabindex="1" src="projects/mobile_robots/fourWheelsRaspberryPi/4WheelsRaspberryPi2.jpg"
+            alt="line_follower" class="img-responsive " title="4 wheels with camera Temsorflow" />
+          <a class="btn btn-primary btn-lg" href="#" role="button">4 wheels (Raspberry Pi, Google Coral)</a>
+          <p></p>
+        </article>
+
+        <article class="col-sm-offset-0 col-sm-6  col-lg-6 col-md-6">
+          <img src="projects/mobile_robots/fourWheelsRaspberryPi/4WheelsRaspberryPiInside4.jpg"
+            alt="4 wheels with camera" class="img-responsive " />
+          <a class="btn btn-primary btn-lg" href="#" role="button">4 wheels with camera </a>
+          <p> </p>
+        </article>
+
+        <div class="clearfix visible-sm-block"></div>
+        <article class="col-sm-6 col-lg-6 col-md-6">
+          <img src="projects/mobile_robots/fourWheelsRaspberryPi/4WheelsRaspberryPi3Front3.jpg"
+            alt="4 wheels with camera" class="img-responsive " />
+          <a class="btn btn-primary btn-lg" href="#" role="button">4 wheels with camera front view </a>
+          <p></p>
+        </article>
+
+
+        <!-- Middle -->
+        <article class="col-sm-6 col-lg-6 col-md-6"> <img tabindex="1" src="projects/mobile_robots/line_follower.jpg"
+            alt="line_follower" class="img-responsive " title="Line_follower" />
+          <a class="btn btn-primary btn-lg" href="#" role="button">Line follower (Arduino)</a>
+          <p></p>
+        </article>
+
+        <article class="col-sm-offset-0 col-sm-6  col-lg-6 col-md-6">
+          <img src="nowe_zdjecia/6_kol.jpg" alt="Six_weel_robot" class="img-responsive " />
+          <a class="btn btn-primary btn-lg" href="#" role="button">6 wheel vehicle (BASCOM) </a>
+          <p> </p>
+        </article>
+
+        <!-- LAST 2 -->
+        <div class="clearfix visible-sm-block"></div>
+        <article class="col-sm-6 col-lg-6 col-md-6"><img src="projects/mobile_robots/line_follower_design.jpg"
+            alt="line follower design" class="img-responsive " />
+          <a class="btn btn-primary btn-lg" href="#" role="button">Design Line follower </a>
+          <p></p>
+        </article>
+
+        <article class=" col-sm-6 col-lg-6 col-md-6"><img src="nowe_zdjecia/six_wheel2.jpg" alt="design_robots"
+            class="img-responsive " />
+          <a class="btn btn-primary btn-lg" href="#" role="button">Design mobile robot </a>
+          <p></p>
+          <p>&nbsp;</p>
+        </article>
+
+        <!-- Footer -->
+        <footer class="col-lg-12 col-sm-offset-1 col-sm-12 col-md-offset-0 col-md-12">
+          <p>2020 Roboworld created by Marek Augustyn</p>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
