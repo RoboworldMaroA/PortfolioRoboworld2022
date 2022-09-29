@@ -12,8 +12,8 @@ th {
 
 #featureTop .col-sm-12.col-sm-offset-1 h2 {
   text-align: center;
-  /* [disabled]background-color: #165070; */
 }
+
 #featureTop h2 {
   color: #fdfdfd;
 }
@@ -107,4 +107,9 @@ th {
   );
 
   margin-bottom: 2%;
+}
+
+#linkedInFooter {
+  margin-left: 2%;
+  margin-right: 2%;
 }
