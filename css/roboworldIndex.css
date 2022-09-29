@@ -167,27 +167,21 @@ img[src$="icon.svg"] {
   background-image: linear-gradient(180deg, #052a3f 0%, #052d44 100%);
 }
 footer {
-  /*background-color: #FDFDFD; */
   background-color: #f0f0f5;
-  /*background-image: -webkit-linear-gradient(270deg,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(250,250,250,1.00) 18.13%,rgba(249,249,249,1.00) 30.57%,rgba(246,245,245,1.00) 69.43%,rgba(253,253,253,1.00) 100%);
-	background-image: -moz-linear-gradient(270deg,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(250,250,250,1.00) 18.13%,rgba(249,249,249,1.00) 30.57%,rgba(246,245,245,1.00) 69.43%,rgba(253,253,253,1.00) 100%);
-	background-image: -o-linear-gradient(270deg,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(250,250,250,1.00) 18.13%,rgba(249,249,249,1.00) 30.57%,rgba(246,245,245,1.00) 69.43%,rgba(253,253,253,1.00) 100%);
-	
-    
-    
-    background-image: linear-gradient(180deg,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(253,253,253,1.00) 0%,rgba(250,250,250,1.00) 18.13%,rgba(249,249,249,1.00) 30.57%,rgba(246,245,245,1.00) 69.43%,rgba(253,253,253,1.00) 100%);
-    */
-
   color: #c0c0c0;
   text-align: center;
   font-size: 0.8em;
 }
+
+#linkedInFooter {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 body {
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
-
-  /* font-family: 'Comic Neue', cursive; */
   font-family: "Open Sans", sans-serif;
 }
 body p {
