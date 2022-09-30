@@ -122,6 +122,10 @@ img:hover {
 
 */
 
+#secondParagrapthOnIndexPage {
+  margin-bottom: 1%;
+}
+
 #back {
   box-shadow: none;
   transition: none;
@@ -166,11 +170,12 @@ img[src$="icon.svg"] {
   );
   background-image: linear-gradient(180deg, #052a3f 0%, #052d44 100%);
 }
+
 footer {
   background-color: #f0f0f5;
   color: #c0c0c0;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 #linkedInFooter {
