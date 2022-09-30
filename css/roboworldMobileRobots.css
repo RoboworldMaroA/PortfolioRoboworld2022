@@ -1,3 +1,7 @@
+iframe {
+  border-radius: 3%;
+}
+
 #iconsMobileRobots {
   position: relative;
   color: #218cc7;

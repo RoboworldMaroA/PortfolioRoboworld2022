@@ -104,6 +104,7 @@ img {
   margin-top: 5%;
   margin-bottom: 2%;
   transition: all 2s, transform 0.5s, box-shadow 0.5s;
+  border-radius: 3%;
 }
 
 img:hover {
@@ -202,6 +203,7 @@ body p {
 #topImageIndexPage {
   position: relative;
   color: #052a3f;
+  background-color: #052a3f;
 }
 
 #topImageIndexPage h1 {
