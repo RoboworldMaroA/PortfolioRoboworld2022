@@ -46,3 +46,19 @@ iframe {
 .btn {
   background-color: #052a3f !important;
 }
+
+#sixWheelWehiclePhotos {
+  margin-bottom: 3%;
+}
+
+#fourWheelWehiclePhotos {
+  margin-bottom: 3%;
+}
+
+#tensorflowPhotos {
+  margin-bottom: 3%;
+}
+
+#remoteControllerPhotos {
+  margin-bottom: 3%;
+}
